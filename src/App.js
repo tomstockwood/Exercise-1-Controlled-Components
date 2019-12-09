@@ -11,7 +11,7 @@ class App extends Component {
 
 	updateInput = (inputText) => {
     	this.setState(() => ({
-        	inputText: inputText.trim()
+        	inputText: inputText
         })
                      
     )}
@@ -26,7 +26,7 @@ class App extends Component {
         <div className="container">
           <input type="text" placeholder="Say Something" value = {this.state.inputText} onChange={(event) => this.updateInput(event.target.value)} />
           <p className="echo">Echo:</p>
-          <p>This should mirror the text you typed into the input field. {this.state.inputText}</p>
+          <p>{this.state.inputText}</p>
         </div>
       </div>
     );
